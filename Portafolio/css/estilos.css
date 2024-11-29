@@ -1,13 +1,31 @@
+    /*=================================*/
+	/*        SELECTORES-GENERALES     */
+	/*=================================*/
 * {
     box-sizing: border-box;
 }
-
-/**************************/
 
 html {
     scroll-behavior: smooth; 
 }
 
+    /*==================================================================================*/
+    /*                                        BODY                                      */
+    /*==================================================================================*/
+
+body {
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+    
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+    
 .btn-ini {
     position: fixed;
     width: 40px;
@@ -21,62 +39,58 @@ html {
     border-radius: 50px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
     font-size: 20px;
+    z-index: 1000; 
 }
 
 .btn-ini:hover {
     background: #000;
 }
 
-body {
-    background: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-}
+ 
+    /*==================================================================================*/
+    /*                                        HEADER                                    */
+    /*==================================================================================*/
 
-.contenedor {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
 
-    /*============*/
-	/*   HEADER   */
-	/*============*/
 
 header {
+    width: 100%;
+    height: 720px;
     background: url('../img/Pag\ 1.jpg') #000000;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
+    background-size: cover;
+    background-position: center;   
 }
+
 
     /*=================================*/
 	/*   HEADER - MENÚ DE NAVEGACIÓN   */
 	/*=================================*/
 
-header .menu {
-    margin: 40px 0;
-    text-align: center;
+
+
+.inicio .menu { 
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-header .menu a {
+.inicio .menu a {
+    width: 15%;
+    height: 35px;
     background-color: #000000;
     border-radius: 30px;
-    margin: 0 20px;
+    margin: 20px;
     color: #59fa9a;
-    display: inline-block;
-    padding: 9px 30px;
+    padding: 9px 14px;
     text-decoration: none;
     font-size: 1em;
     font-weight: 700;
+    text-align: center;
+ 
+    
 }
 
-header .menu a:hover {
+.inicio .menu a:hover {
     text-decoration: underline #59fa9a;
   
 }
@@ -86,125 +100,221 @@ header .menu a:hover {
 	/*===============================*/
 
 header .contenedor-texto {
-    margin: 300px 0px 300px 300px;
+    width: 50%;
+    position: absolute;
+    right: 15%;
+    top: 60%;
+    
 }
 
 header .contenedor-texto .texto h1,
 header .contenedor-texto .texto h2 {
-
+    
     color: #59fa9a;
     font-weight: 700;
     margin: 0;
 }
 
-header .contenedor-texto .texto .nombre {
+header .contenedor-texto .texto .TITULO {
     margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 3em;
     line-height: 50px;
 }
 
-header .contenedor-texto .texto .profesion {
-    font-size: 25px;
+header .contenedor-texto .texto .SUBTITULO {
+    font-size: 1.5;
     line-height: 25px;
 }
+    /*==================================================================================*/
+    /*                                       MAIN                                       */
+    /*==================================================================================*/
 
     /*======================*/
 	/*   MAIN - NOSOTROS    */
 	/*======================*/
  
 .main .nosotros {
+    width: 100%;
+    height: 781px;
     background: url('../img/Pag\ 2.jpg') #000000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;  
+    background-size: cover;  
     
 }
-  
+
 .main .nosotros .contenedor {
-    padding: 100px 100px 100px 20px;
+    width: 60%;
+    padding: 100px 50px 50px 50px;
     margin: 0;
-    font-size: 25px;
-    line-height: 50px;
-   
+    font-size: 20px;
+    line-height: 30px;
+    color: #59fa9a;  
 }
 
-
 .main .nosotros .contenedor .texto {
+    width: 100%;
     color: #59fa9a;
     font-weight: 600;
     margin: 0;
-    
 }
+  
     /*======================*/
 	/*   MAIN - ENTREVISTA  */
 	/*======================*/
 
 
-.main .entrevista {
+ .main .entrevista {
+    width: 100%;
+    height: 781px;
     background: url('../img/Pag\ 3.jpg') #000000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;  
+    background-size: cover;
+    position: relative;
 }
 
-.main .entrevista .contenedor {
-    padding: 100px 100px 100px 100px;
-    font-size: 25px;
-    line-height: 50px;
-     
-}
+    /*============================*/
+	/* MAIN - ENTREVISTA - TEXTO  */
+	/*============================*/
+
 
 .main .entrevista .contenedor .texto {
+    width: 40%;
     background-color: #edd6a4;
-    border-radius: 30px;
+    border-radius: 30px 0 0 30px;
     padding: 20px 20px;
-    position: relative;
-    bottom: 40px;
-    left: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+    /*==================================*/
+	/* MAIN - ENTREVISTA - ENLACE/BTON  */
+	/*==================================*/
+
+
+.main .entrevista .contenedor .enlaceentrevista {
+    position: absolute;
+    right: 11%;
+    top: 22%;
+}   
+
+.main .entrevista .contenedor .enlaceentrevista a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #f60707c5;
+    padding: 5px 20px 5px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.main .entrevista .contenedor .enlaceentrevista a:hover {
+    color: #f60707c5;
+    background-color: #ffffff;
+}
+
+    /*=============================*/
+	/* MAIN - PERFIL PROF - TEXTO  */
+	/*=============================*/
+
+
+.main .entrevista .contenedor .texto2 {
+    width: 30%;
+    background-color: #edd6a4;
+    border-radius: 0px 30px 30px 0;
+    padding: 10px 60px 40px 20px;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
     
 }
 
-.main .entrevista .contenedor .texto2 {
-    background-color: #edd6a4;
-    border-radius: 30px;
-    padding: 20px 20px;
-    position: relative;
-    top: 30px;
-    right: 100px;
+    /*===================================*/
+	/* MAIN - PERFIL PROF - ENLACE/BTON  */
+	/*===================================*/
+
+
+.main .entrevista .contenedor .enlaceperfilprofesional {
+    position: absolute;
+    left: 8%;
+    bottom: 7%;
 }
-    /*=======================*/
-	/*         FOOTER        */
-	/*=======================*/
+
+.main .entrevista .contenedor .enlaceperfilprofesional a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 5px 20px 5px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.main .entrevista .contenedor .enlaceperfilprofesional a:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+    /*==================================================================================*/
+    /*                                     FOOTER                                       */
+    /*==================================================================================*/
+
     
 footer {
+    width: 100%;
+    height: 781px;
     background: url('../img/Pag\ 4.jpg') #000000;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto;
-    padding: 50px 50px 50px 50px;
+    background-size: cover;
+    position: relative;
 }
 
     /*=============================*/
 	/*   FOOTER - SALIDA LABORAL   */
 	/*=============================*/
 
-footer .salida-laboral .contenedor {
-    
-    padding: 50px 50px 0px 50px;
-    font-size: 25px;
-    line-height: 50px;
-    position: relative;
-    right: 150px;
-   
-}
+
 
 footer .salida-laboral .contenedor .texto{
+    width: 35%;
     background-color: #edd6a4;
-    border-radius: 30px;
-    padding: 20px 20px;
-  
-    
+    border-radius: 30px 0 0 30px;
+    padding: 10px 60px 40px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
 }
+
+    /*===========================================*/
+	/*   FOOTER - SALIDA LABORAL - ENLACE/BOTN   */
+	/*===========================================*/
+
+
+footer .salida-laboral .contenedor .enlacesalidalaboral {
+    position: absolute;
+    right: 10%;
+    top: 26%;
+}  
+
+footer .salida-laboral .contenedor .enlacesalidalaboral a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 5px 20px 5px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+footer .salida-laboral .contenedor .enlacesalidalaboral a:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
     /*=======================*/
 	/*   FOOTER - CONTACTO   */
 	/*=======================*/
@@ -225,6 +335,13 @@ footer .contacto .titulo {
     color: #ffffff;
     text-align: center;
 }
+
+footer .contacto .contenedor {
+padding: 20px;
+position: absolute;
+bottom: 0;
+left: 10%;
+} 
 
 footer .contacto .formulario {
     display: flex;
@@ -260,7 +377,7 @@ footer .contacto .formulario textarea {
     min-width: 100%;
     max-width: 100%;
     min-height: 100px;
-    max-height: 300px;
+    max-height: 100px;
     margin-bottom: 15px;  
 }
 
@@ -269,7 +386,7 @@ footer .contacto .formulario .boton {
     background: #59fa9a;
     color: #000000;
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
     padding: 15px 40px;
     cursor: pointer;
 }
@@ -278,27 +395,280 @@ footer .contacto .formulario .boton:hover {
     background: #42b771;
 }
 
+
+
+footer .redes-sociales span {
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    position: absolute;
+    top: 1%;
+    left: 11%;
+  
+    
+    
+}
+
+footer .redes-sociales .logos {
+  position: absolute;
+  left: 2%;
+  top: 9%;
+}
+
+footer .redes-sociales .logos a{
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    padding: 15px 0;
+    border-radius: 6px;
+    font-size: 40px;
+    margin: 0 40px;
+    
+}
+
+footer .redes-sociales .facebook:hover { background: #1877f2; }
+footer .redes-sociales .paginaweb:hover { background: #a6abaf; }
+footer .redes-sociales .instagram:hover { background: #e1306c; }
+
+
+    /*==================================================================================*/
+    /*                               MEDIA-QUERIES                                      */
+    /*==================================================================================*/
+
+
 @media screen and (max-width: 800px) {
-    header .menu {
-        text-align: center;
+
+    /*============*/
+	/*    BODY    */
+	/*============*/ 
+
+    body {
+        font-size: 13px;
     }
 
-    .main .trabajos .contenedor-trabajos .trabajo {
-        width: 46%;
+    /*============*/
+	/*   HEADER   */
+	/*============*/ 
+
+    header {
+        height: 450px;
     }
+
+    .inicio .menu a {
+        padding: 10px 14px;
+    }
+    
+    header .contenedor-texto {
+        top: 32%;
+    }
+
+    header .contenedor-texto .texto .TITULO {
+    margin-bottom: 3px;
+    font-size: 2.5em;
+    line-height: 35px;
+    }
+
+    header .contenedor-texto .texto .SUBTITULO {
+        font-size: 1.2em;
+        line-height: 15px;
+    }
+    
+    /*============*/
+	/*    MAIN    */
+	/*============*/
+
+    .main .nosotros {
+        height: 450px;
+    }
+
+    .main .nosotros .contenedor {
+        font-size: 1.2em;
+        line-height: 19px;
+        padding: 50px 50px 50px 50px
+    }
+
+    .main .entrevista {
+        height: 450px;
+    }
+
+    .main .entrevista .contenedor .enlaceentrevista {
+        top: 35%;
+    }
+
+    .main .entrevista .contenedor .texto2 {
+        width: 42%;
+        padding: 0px 0px 27px 12px;
+    }
+
+    /*============*/
+	/*   FOOTER   */
+	/*============*/
+
+    footer {
+        height: 450px;
+    }
+
+    footer .salida-laboral .contenedor .texto {
+        padding: 10px 0 20px 10px;
+    }
+
+    footer .salida-laboral .contenedor .enlacesalidalaboral {
+        right: 6%;
+        top: 35%;
+    }
+
+    footer .contacto .contenedor {
+        width: 68%;
+    }
+
+    footer .contacto .titulo {
+        font-size: 32px;
+        margin-bottom: 9px;
+        color: #000000;
+    }
+
+    footer .redes-sociales .logos {
+        left: 7%;
+    }
+
+    footer .redes-sociales .logos a {
+        padding: 0;
+        margin: 1px;
+        font-size: 32px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
-    header .contenedor-texto .texto .nombre {
-        font-size: 35px;
+    
+    /*============*/
+	/*    BODY    */
+	/*============*/ 
+
+    body {
+        font-size: 9px;
     }
 
-    header .contenedor-texto .texto .profesion {
-        font-size: 18px;
+    /*============*/
+	/*   HEADER   */
+	/*============*/ 
+
+    header {
+        height: 300px;
     }
 
-    footer .redes-sociales .contenedor {
-        flex-wrap: wrap;
-        padding: 20px 0;
+    .inicio .menu a {
+        width: 25%;
+        padding: 12px 14px;
+        font-size: 1.2em;
     }
+
+    header .contenedor-texto .texto .TITULO {
+        font-size: 2.3em;
+        line-height: 28px;
+    }
+
+    /*============*/
+	/*    MAIN    */
+	/*============*/
+
+    .main .nosotros {
+        height: 300px;
+    }
+
+    .main .nosotros .contenedor {
+        font-size: 1.1em;
+        line-height: 11px;
+    }
+
+    .main .entrevista { 
+        height: 300px;
+    }
+    .main .entrevista .contenedor .enlaceentrevista {
+        top: 33%;
+        right: 5%;
+    }
+
+    .main .entrevista .contenedor .texto2 {
+        width: 46%;
+        padding: 0px 16px 15px 9px;
+    }
+
+    /*============*/
+	/*   FOOTER   */
+	/*============*/
+
+    footer {
+        height: 300px;
+    }
+
+    footer .contacto .titulo {
+        font-size: 22px;
+        margin-bottom: -1px;
+    }
+   
+    footer .contacto .formulario input[type="text"],
+    footer .contacto .formulario input[type="email"],
+    footer .contacto .formulario textarea {
+        border: 2px solid #cecece;
+        border-radius: 5px;
+        padding: 7.5px 10px; 
+        font-size: 10px; 
+        color: #a4a4a4;
+    }
+
+    footer .contacto .formulario input[type="text"]:hover,
+    footer .contacto .formulario input[type="email"]:hover,
+    footer .contacto .formulario textarea:hover {
+        border: 2px solid #59fa9a;
+    }
+
+    footer .contacto .formulario input[type="text"],
+    footer .contacto .formulario input[type="email"] {
+        width: 100%;   
+        margin-bottom: 7.5px; 
+    }
+
+    footer .contacto .formulario textarea {
+        min-height: 50px; 
+        max-height: 50px; 
+        margin-bottom: 7.5px;
+    }
+
+    footer .contacto .formulario .boton {
+        padding: 7.5px 20px; 
+        font-size: 10px; 
+    }
+
+    footer .redes-sociales span {
+        font-size: 18px; 
+        top: 0%; 
+        left: 10%;
+    }
+
+    footer .redes-sociales .logos {
+        left: 3%;
+        top: 7%;
+    }
+
+    footer .redes-sociales .logos a {
+        font-size: 2em; 
+        width: 50px; 
+        margin: 0 10px; 
+        padding: 10px 0; 
+    }
+
+    footer .salida-laboral .contenedor .texto {
+        padding: 1px 0 10px 10px;
+    }
+
+    footer .salida-laboral .contenedor .enlacesalidalaboral {
+        right: 6%;
+        top: 35%;
+    }
+    
+
+    
 }
